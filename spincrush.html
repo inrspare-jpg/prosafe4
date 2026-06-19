@@ -18,15 +18,15 @@
         }
         
         @keyframes gameSlide {
-            0%, 10% { transform: translateX(0); }        /* 第一张停 10% */
-            12.5%, 22.5% { transform: translateX(-12.5%); } /* 第二张停 10% */
-            25%, 35% { transform: translateX(-25%); }       /* 第三张停 10% */
+            0%, 10% { transform: translateX(0); }
+            12.5%, 22.5% { transform: translateX(-12.5%); }
+            25%, 35% { transform: translateX(-25%); }
             37.5%, 47.5% { transform: translateX(-37.5%); } 
             50%, 60% { transform: translateX(-50%); } 
             62.5%, 72.5% { transform: translateX(-62.5%); } 
             75%, 85% { transform: translateX(-75%); } 
             87.5%, 97.5% { transform: translateX(-87.5%); } 
-            100% { transform: translateX(0); } /* 回到第一张 */
+            100% { transform: translateX(0); }
         }
 
         
@@ -186,7 +186,6 @@
                         font-size: 1em;
                 }
                 
-                /* Game carousel mobile styles */
                 .game-carousel-container {
                         height: 150px;
                 }
@@ -195,7 +194,6 @@
                         height: 180px;
                 }
                 
-                /* About section mobile styles */
                 .about-section .card-scroll-track {
                         display: flex;
                         flex-direction: column;
@@ -344,7 +342,6 @@
             border-top: 1px solid #333;
         }
         
-        /* Game carousel styles */
         .game-carousel-container {
             position: relative;
             width: 100%;
@@ -359,7 +356,7 @@
         
         .game-carousel {
             display: flex;
-            width: 800%; /* 8 张图 */
+            width: 800%;
             height: 100%;
             animation: gameSlide 25s infinite;
         }
@@ -371,7 +368,6 @@
             background: #1e1e1e;
         }
         
-        /* About section styles */
         .about-section {
             padding: 2em 1em;
             background: #1e1e1e;
@@ -555,7 +551,6 @@
             const track = container.querySelector('.card-scroll-track');
             const cards = Array.from(track.children);
             
-            // Only duplicate cards for rewards section (not about section)
             if (!container.closest('.about-section')) {
                 cards.forEach(card => {
                     const clone = card.cloneNode(true);
